@@ -1,0 +1,795 @@
+* {
+    margin: 0;/*encostar barra acima(default)*/
+    padding: 0; /*mexe com barra (default)*/
+
+}
+
+body {
+    background-color:white; /*mudar cor do fundo da pagina*/
+}
+
+
+/*-------------------------------------------------NAV---------------------------------------------------------------------*/
+
+
+.cab { 
+    width: 100%; /*comprimento bloco com informacoes*/
+    height: 150px; /*largura bloco com informacoes*/
+    background-color: white; /*cor barra com informacoes*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none; /*tirar pontos*/
+}
+
+ .logo {
+           height: 95px;
+           width: 100%;
+           display: flex;
+           justify-content: center;
+        }
+
+.sessao{ 
+    height: 25px;
+    margin-bottom: -5px;
+}        
+
+.principal {
+    width: 80%;
+    margin: auto;
+    list-style: none;
+    margin-bottom: 40px;
+    display: flex;
+    justify-items: center;
+    gap: 25px;
+    font-family: Helvetica, sans-serif;
+}
+
+.principal li {
+    display: inline;
+}
+
+.principal a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Efeito hover */
+.principal a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #C22A2B;
+    transition: width 0.3s ease;
+}
+
+.principal a:hover::after {
+    width: 100%;
+}
+
+.principal a.active::after {
+    width: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+/*-------------------------------------------------IMAGEM INICIAL---------------------------------------------------------------------*/
+
+
+.imagemBotao {
+    position: relative; /* Establish a positioning context */
+    width: 100%; /* Ensure the container spans full width */
+}
+
+.imagemInicial {
+    width: 100%; 
+}
+
+.centered-botao {
+    position: absolute; /* Position relative to the parent container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for element's own size */
+    color: white; /* Make text readable on the image */
+    z-index: 1; /* Ensure text stays on top of the image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+/*-------------------------------------------------FOOTER---------------------------------------------------------------------*/
+
+footer{
+    width: 100%;
+    background-color: #FAC6CC;
+    height: 100%;   
+    margin-top: 45rpx;
+    padding-top: 40px ;
+    padding-bottom: 20px;
+}
+
+.section{
+    width: 80%;
+    margin:auto
+}
+.linha{
+    width: 100%;
+    height: 0.4px;
+    background-color: #C22A2B;
+}
+
+.linha1{
+    width: 100%;
+    height: 0.4px;
+    background-color: #C22A2B;
+    margin-top: 40px;
+}
+
+
+.imagemGaleria{
+    width: 150px;
+    height: 200px;
+}
+
+.galeria{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+.colunas{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between; /* separa o maximo possivel os elementos de forma a ficarem alinhados*/
+    align-items: start;
+    gap: 25px;
+}
+.coluna1{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #C22A2B;
+}
+
+.fundoFooter{
+    display: flex;
+    justify-content: space-between;
+}
+.buttonEmail{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    padding-left: 15px;
+    border: 2px solid #C22A2B;
+    border-radius: 6px;
+}
+.textoEmail{
+    font-family: Inter;
+    font-size: 16px;
+}
+
+
+/*-------------------------------------------------TEXTOS FOOTER---------------------------------------------------------------------*/
+.textoRedes{
+    color:#C22A2B;
+    font-family:'Inter', sans-serif;
+    font-size: 12px;
+}
+
+.textoSiga{
+    font-family:'Nunito', sans-serif;
+    font-weight:bolder;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 27px;
+    color:#C22A2B;
+}
+
+.textFootage{
+    margin-bottom:35px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+}
+
+.textoFootage{
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: lighter;
+}
+
+.textoFootage a {
+    text-decoration: none;  /* Remove o sublinhado */
+    color: inherit;         /* Mantém a cor do texto padrão */
+  }
+
+  
+  
+  .colunas a {
+    text-decoration: none;  /* Remove o sublinhado */
+    color: inherit;         /* Mantém a cor do texto padrão */
+  }
+  
+.textoFinal{
+    font-family:'Inter', sans-serif;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    font-size: 17px;
+    color:#C22A2B;
+}
+
+.textoFinal1{
+    font-family:'Inter', sans-serif;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    font-size: 17px;
+    color:#C22A2B;
+    text-align: end;
+}
+
+/*-------------------------------------------------PÁGINA INICIAL---------------------------------------------------------------------*/
+.tituloInicial{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.subtituloInicial{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+                            /*--------------------SECÇÃO CARROUSEL-----------------------------*/
+
+.meio{
+    display: flex;
+    gap: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px ;
+    margin-bottom: 40px;
+}
+
+.imagem{
+    width: 260px;
+}
+
+                            /*--------------------SECÇÃO VALORES-----------------------------*/
+.geralValores{
+    margin-left: 130px;
+    width: 26%;
+    margin-top: 50px;
+}
+
+.blocoValores{
+    margin-bottom: 50px;
+}
+                            
+.tituloValores{
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+                            
+.textoValores{
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+}
+                            
+.sectionValores{
+    display: flex;
+}
+                            
+.autocolante{
+    width: 100px;
+    height: 100px;
+    margin-top: 70px;
+    z-index: 1;
+}
+
+.imagemValores{
+    width: 320px;
+    height: 375px;
+    margin-top: 40px;
+    margin-left: -70px;
+}
+
+.tituloValores1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.textoValores1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.geralValores1{
+    margin-left: 20px;
+    width: 25%;
+    margin-top: 100px;
+}
+
+                            /*--------------------SECÇÃO BLOCO-----------------------------*/
+.imagemBloco{
+    margin-left: 130px;
+    width: 450px;
+    margin-bottom: 40px;
+}
+
+.retRosa{
+    width: 720px;
+    height: 300px;
+    background-color: #FAC6CC;
+    margin-top: 40px;
+    margin-left: -100px;
+}
+
+.sectionBloco{
+    display: flex;
+}
+
+.tituloBloco{
+    color: #1E1E1E;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.tituloBloco1{
+    color: #1E1E1E;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.textoBloco{
+    color: #1E1E1E;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    width: 90%;
+}
+
+                            /*--------------------SECÇÃO PERSONALIZA-----------------------------*/
+.imagemPersonaliza {
+    width: 100%; 
+    margin-bottom: 80px;
+}
+
+.textoImagem{
+    font-size: 33px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+                            /*--------------------SECÇÃO NEWSLETTER-----------------------------*/
+
+.Newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.tituloNew{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #1E1E1E;
+    margin-bottom: 15px;
+}
+
+.textoNew{
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: #1E1E1E;
+    margin-bottom: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.buttonEmail1{
+    display: flex;  
+    justify-content: space-between;
+    width: 15%;
+    align-items: center;
+    padding: 5px;
+    padding-left: 15px;
+    border: 2px solid #767676;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.textoEmail1{
+    font-family: Inter;
+    font-size: 16px;
+    color: #767676
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+.tituloPagina{
+    font-size: 25px; ;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold ;
+    margin-left: 130px;
+}
+
+
+/*---------------------------------------------------------SOBRE NÓS---------------------------------------------------------------*/
+
+.blocosSobre{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    gap: 20px;
+}
+
+.bloco{
+    padding: 40px;
+    width: 100%;
+    background-color: #FAC6CC;
+
+}
+
+.blocoSlogan{
+    width: 100%;
+    background-color: #C22A2B;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.tituloBlocoSobre{
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+}
+
+.textoBlocoSobre{
+    color: black;
+    font-family: Nunito, sans-serif;
+}
+
+.tituloSlogan{
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+}
+
+
+.textoSlogan{
+    text-align: center;
+    color: white;
+    font-family: Nunito, sans-serif;
+}
+
+/*---------------------------------------------------------INICIAR SESSÃO---------------------------------------------------------------*/
+.geralIS{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.blocoI1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+    border: 2px solid #C22A2B;
+    border-radius: 5px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.shopIS{
+    background-color: #C22A2B;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 7px;
+    color: white;
+    font-family: Nunito, sans-serif;
+    font-size: 13px;
+    border-color:#C22A2B;
+}
+.tituloIS{
+    color: #C22A2B;
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+}
+.blocoI2{
+    padding: 40px;
+    width: 60%;
+    background-color: #FAC6CC;
+    border-radius: 4px;
+}
+.textoForms{
+    color: #C22A2B;
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+
+}
+.palavraPasse{
+    color:#C22A2B;
+    font-family: Nunito, sans-serif;
+    text-decoration: underline;
+    font-size: 10px;
+    margin-top: -10px;
+}
+.blocoI2-1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caixa{
+    border: 1px solid #C22A2B;
+    border-radius: 5px;
+    background-color: #FAC6CC;
+    padding: 4px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    width: 76%;
+}
+
+.caixa::placeholder{
+    color: #C22A2B;   
+}
+
+.shopIS2{
+    background-color: #C22A2B;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 7px;
+    color: white;
+    font-family: Nunito, sans-serif;
+    font-size: 13px;
+    width: 80%;
+    border-color: #C22A2B;
+}
+
+/*---------------------------------------------------------Produto selecionado---------------------------------------------------------------*/
+
+.produtoSelect{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 52px;
+}
+
+.blocoProduto{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    justify-content: start;
+}
+.brincosProduto{
+    margin-bottom: 12px;
+    font-family: Nunito, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+.coresProduto{
+    display: flex;
+    gap: 5px;
+}
+.colorProduto{
+    border-radius: 100%;
+}
+
+.colorProduto.selected {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 3px solid #C22A2B;
+}
+.buttonProduto{
+ padding-top: 5px;
+ padding-bottom: 5px;
+ background-color: #C22A2B;
+ border: 1px solid #C22A2B;
+ border-radius: 7px;
+ color:white;
+ font-family: Inter, sans-serif;
+}
+
+.buttonProduto1{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    border: 1px solid #C22A2B;
+    border-radius: 7px;
+    color: #C22A2B;
+    font-family: Inter, sans-serif;
+}
+.descricaoProduto{
+    font-family: Inter, sans-serif;
+}
+.precoProduto{
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+}
+.tituloProduto{
+    font-family: Inter, sans-serif; 
+    font-size: 10px;   
+}
+.corProduto{
+    font-family: Inter, sans-serif; 
+    font-size: 10px;
+}
+
+.quantidadeProduto {
+    padding: 4px;
+    border: 1px solid #1E1E1E;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+}
+
+.quantity-btn {
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+}
+
+#quantity {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+    font-family: Inter, sans-serif; 
+    font-size: 16px;
+    padding-top: 2px;
+}
+.recolhaProduto{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.recolhaProduto1{
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+}
+.recolhaproduto2{
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+}
+.recolhaproduto3{
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+.product {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.product .price {
+    font-weight: bold;
+    color: green;
+}
+.hidden {
+    display: none;
+}
+
+/*---------------------------------------------------------Carrinho---------------------------------------------------------------*/
+
+.carrinho{
+    width: 80%;
+    margin: auto;
+}
+.secoesCarrinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloCarrinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seccao1Carrinho{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 12px;
+    border-right: 2px solid black;
+    padding-right: 60px;
+
+
+}
+.linhaCarrinho{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    margin-bottom: 12px;
+}
+.quantidadeCarrinho{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.quantidadeCarrinho1{
+    display: flex;
+    flex-direction: column;
+    gap: 2px ;
+}
+.lixoCarrinho{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.quantidadeProduto2 {
+    padding: 4px;
+    border: 1px solid #1E1E1E;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+}
+.informacoesCarrinho{
+    padding: 4px;
+    border: 1px solid black;
+}
+.precoCarrinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.imagemCarrinho{
+    padding-left: 20px;
+    width: 40%;
+}
+
+/*---------------------------------------------------------Pop-up---------------------------------------------------------------*/
