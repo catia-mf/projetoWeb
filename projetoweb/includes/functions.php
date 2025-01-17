@@ -189,30 +189,31 @@ function listarProdutos5($conn){
 
 }
 
-function search($conn, $keywords) { 
-    // Escapar os caracteres especiais para evitar SQL Injection
+function search($conn, $keywords) {
     $search = mysqli_real_escape_string($conn, $keywords);
 
-    // Consultas para cada tabela com UNION
-    $sql = "SELECT * FROM produtobrinco WHERE nome LIKE '%$search%'
-        UNION
-        SELECT * FROM produtoanel WHERE nome LIKE '%$search%'
-        UNION
-        SELECT * FROM produtocolar WHERE nome LIKE '%$search%'
-        UNION
-        SELECT * FROM produtopulseira WHERE nome LIKE '%$search%'
-        UNION
-        SELECT * FROM produtocaneca WHERE nome LIKE '%$search%'
-        UNION
-        SELECT * FROM produtoroupa WHERE nome LIKE '%$search%'
-    ";
+    // Tabelas que devem ser pesquisadas
+    $tables = [
+        'produtopulseira', 
+        'produtocolar', 
+        'produtoroupa', 
+        'produtobrinco', 
+        'produtoanel', 
+        'produtocaneca'
+    ];
 
+    $results = [];
 
+    // Itera por cada tabela e realiza a pesquisa
+    foreach ($tables as $table) {
+        $sql = "SELECT * FROM $table WHERE nome LIKE '%$search%'";
 
-    // Executar a consulta
-    if ($resultData = mysqli_query($conn, $sql)) {
-        return $resultData;
-    } else {
-        return false;
+        if ($resultData = mysqli_query($conn, $sql)) {
+            while ($row = mysqli_fetch_assoc($resultData)) {
+                $results[] = $row; // Adiciona cada resultado ao array
+            }
+        }
     }
+
+    return !empty($results) ? $results : false;
 }

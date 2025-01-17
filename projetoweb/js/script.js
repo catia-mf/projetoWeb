@@ -42,27 +42,3 @@ increaseBtn.addEventListener('click', () => {
     quantityDisplay.textContent = quantity;
     console.log(quantityDisplay)
 });
-
-     // Lógica de Filtro
-     const priceFilter = document.getElementById('priceFilter');
-     const availabilityFilter = document.getElementById('availabilityFilter');
-     const products = document.querySelectorAll('#productContainer .product');
-
-     function filterProducts() {
-         const maxPrice = priceFilter.value ? parseFloat(priceFilter.value) : Infinity;
-         const showAvailableOnly = availabilityFilter.checked;
-
-         products.forEach(product => {
-             const price = parseFloat(product.getAttribute('data-price'));
-             const available = product.getAttribute('data-available') === 'true';
-
-             if (price <= maxPrice && (!showAvailableOnly || available)) {
-                 product.classList.remove('hidden');
-             } else {
-                 product.classList.add('hidden');
-             }
-         });
-     }
-
-     priceFilter.addEventListener('input', filterProducts);
-     availabilityFilter.addEventListener('change', filterProducts);

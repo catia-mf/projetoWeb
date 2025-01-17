@@ -730,7 +730,7 @@ footer{
 .secoesCarrinho{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
 }
 
 .tituloCarrinho{
@@ -739,16 +739,7 @@ footer{
     align-items: center;
 }
 
-.seccao1Carrinho{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 12px;
-    border-right: 2px solid black;
-    padding-right: 60px;
 
-
-}
 .linhaCarrinho{
     height: 1px;
     width: 100%;
@@ -757,7 +748,6 @@ footer{
 }
 .quantidadeCarrinho{
     display: flex;
-    align-items: center;
     gap: 20px;
 }
 .quantidadeCarrinho1{
@@ -793,3 +783,49 @@ footer{
 }
 
 /*---------------------------------------------------------Pop-up---------------------------------------------------------------*/
+
+.search-container {
+    display: flex;
+    max-width: 1000px;
+    margin-left:130px;
+    margin-bottom: 50px;
+}
+
+.search-container form {
+    display: flex;
+    width: 100%;
+}
+
+.search-container input[type="text"] {
+    flex: 1;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-container button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #c82333;
+}
+
+
+.linha2{
+    display: flex;
+    width: 40%;
+    height: 0.4px;
+    background-color: black;
+    margin-top: 40px;
+}

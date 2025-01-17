@@ -6,9 +6,9 @@
     <div class="centered-botao">
         <p style="font-family:'Nunito', sans-serif; font-size:12px; margin-bottom:-10px;">NOVIDADE</p>
         <p class="textoImagem">Brincos Caroline</p>
-        <button style="padding: 5px 50px; background-color: #C22A2B; color: white; border: none; border-radius: 4px;">
+        <a href="Produto1.php"><button style="padding: 5px 50px; background-color: #C22A2B; color: white; border: none; border-radius: 4px;">
                 Compre já!
-        </button>
+        </button></a>
 
 
         </div>

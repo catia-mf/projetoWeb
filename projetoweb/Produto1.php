@@ -1,22 +1,14 @@
 <?php include_once 'Header.php'; ?>
 <div class="produtoSelect">
     <div class="imageProduto">
-        <img id="mainImage" src="images/brincoselect.png" alt="brincos" width="100%" height="100%">
+        <img style="margin-left:100px" id="mainImage" src="images/brincos6.png" alt="brincos" width="100%" height="100%">
     </div>
     <div class="blocoProduto">
         <p class="tituloProduto">FEATHER JEWELLERY</p>
         <p class="brincosProduto">Brincos Laço </p>
         <p class="descricaoProduto">Totalmente em aço inoxidável e anti-alérgicos.</p>
         <p class="precoProduto">€10,90 EUR</p>
-        <p class="corProduto">Cor</p>
-        <div class="coresProduto">
-            <div class="colorProduto" data-image="images/brincoselect.png">
-                <img src="images/dourado.png" alt="dourado" width="30px" height="30px">
-            </div>
-            <div class="colorProduto" data-image="images/brincoselect1.png">
-                <img src="images/prateado.png" alt="prateado" width="30px" height="30px">
-            </div>
-        </div>
+    
         <div class="quantidadeProduto">
             <button id="decrease" class="quantity-btn">-</button>
             <p id="quantity">1</p>

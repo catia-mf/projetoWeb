@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <head>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -36,8 +36,10 @@ session_start();
             <li><a href="Canecas.php" data-page="Canecas.php">Canecas</a></li>
             <li><a href="Roupa.php" data-page="Roupa.php">Roupa</a></li>
             <li style="margin-right: 65px;"><a href="Sobre.php" data-page="Sobre.php">Sobre Nós</a></li>
-            <li><a href="Procura.php" data-page="Procura.php"><img src="images/Procura.png" alt="Pesquisar"></a></li>
+            <li><a href="barraPesquisa.php" data-page="Procura.php"><img src="images/Procura.png" alt="Pesquisar"></a></li>
             <li><a href="Carrinho.php" data-page="Carrinho.php"><img src="images/Carrinho.png" alt="Carrinho"></a></li>
+        </div>
+
     <?php
         if(isset($_SESSION["Name"])){
                 echo '<li><a href="includes/Logout.inc.php"><img src="images/logout.png"alt="logout"></a></li>';
